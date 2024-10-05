@@ -39,6 +39,6 @@ const UserSchema = new mongoose.Schema({
 })
 
 const Medicament = mongoose.model('Medicament', MedicamentSchema);
-const User = mongoose.model('User', UserSchema);
+const User = mongoose.model('users', UserSchema);
 
 module.exports = { Medicament, User };

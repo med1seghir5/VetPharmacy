@@ -2,15 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const mongodb = require('mongodb');
 const cors = require('cors');
-const db = require('./DB/db');
-const cors = require('cors');
 const { hash, compare } = require('bcrypt');
 const { User } = require('../Schema/Schema');
+const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
 const app = express();
 app.use(express.json());
-app.use(cookieParser());
+app.use(cookieParser())
 
 app.use(cors({
     origin: 'http://localhost:3001',
